@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+
+
+    <uni.dcloud.io.uniplugin_richalert.face.RecordVideoSurfaceView
+        android:id="@+id/movieRecordSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="@drawable/bbg"
+       />
+
+
+
+    <include
+        android:id="@+id/ll"
+        layout="@layout/record_top_layout" />
+        <TextView
+        android:id="@+id/tvTips"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_below="@+id/ll"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="点击开始按钮之后请根据提示执行指定动作" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_above="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format="%s"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_14" />
+
+
+
+
+    <!--  <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/ll"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+              android:id="@+id/imageView"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:src="@drawable/photo_auxiliaryline" />
+      </LinearLayout>-->
+
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/black"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/public_title_height"
+                android:layout_gravity="center"
+                android:background="@drawable/complete_btn_selector"
+                android:gravity="center"
+                android:text="@string/confirm_submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_16"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_16"
+                android:background="@null"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btnTakeAgain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:text="开始"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size_16"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+</RelativeLayout>
